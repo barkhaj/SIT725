@@ -1,0 +1,15 @@
+{
+  "name": "task2_2p",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Barkha",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "name": "sit725-week2",
+  "version": "1.0.0",
+  "description": "SIT725 week2 ",
+  "main": "server.js",
+  "scripts": {
+"start": "node server.js"
+},
+"repository": {
+"type": "git",
+"url": "git+https://github.com/barkhaj/SIT725/week2.git"
+},
+"keywords": [
+"Nodejs",
+"Express",
+"Materialize",
+"HTML",
+"JS",
+"CSS"
+],
+"author": "Barkha Javed",
+"license": "MIT",
+"bugs": {
+"url": "https://github.com/barkhaj/SIT725/week3/issues"
+},
+"homepage": "https://github.com/barkhaj/SIT725/week3#readme",
+"dependencies": {
+"express": "^4.21.2"
+  }
+}
