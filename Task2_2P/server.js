@@ -41,7 +41,7 @@ app.get('/add', (req, res) => {
     const b = parseFloat(req.query.b);
     // Calculate the sum
     const sum = a + b;
-
+});
 
 
 // Start the server and have it listen on the specified port.
