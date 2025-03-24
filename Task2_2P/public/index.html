@@ -15,7 +15,25 @@
       <label for="b">Number 2:</label>
       <input type="text" id="b" name="b" required>
     </div>
-    <button type="submit">Add it Up!</button>
+    <button type="submit" id="submitBtn">Sum it Up!</button>
+    <p id="sumDisplay"></p>
+    <script>
+        // Attach an event listener to the button
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            // Make a GET request to your API endpoint
+            fetch('/api/add')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the fetched result in the page
+                    document.getElementById('sumDisplay').innerText = data.result;
+                })
+                .catch(error => {
+                    console.error('Error fetching result:', error);
+                    document.getElementById('sumDisplay').innerText = 'Error fetching result.';
+                });
+        });
+    </script>
+
   </form>
 </body>
 </html>
