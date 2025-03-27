@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialize User Form</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper navbar-size green lighten-1">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a target="_blank" href="index.html">Search</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Container for form -->
+    <div class="container">
+        <h3>Locate a Socket User Registration</h3>
+        <form action="/submit-form" method="POST">
+            <!-- Full Name Input -->
+            <div class="input-field">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- Age Dropdown -->
+            <div class="input-field">
+                <select id="age" name="age">
+                    <option value="under18">Under 18</option>
+                    <option value="18-30">18-30</option>
+                    <option value="31-50">31-50</option>
+                    <option value="51plus">51 and above</option>
+                </select>
+                <label for="age">Age</label>
+            </div>
+
+            <!-- Terms and Conditions Checkbox -->
+            <div class="input-field">
+                <label>
+                    <input type="checkbox" id="terms" name="terms" />
+                    <span>I accept the terms and conditions</span>
+                </label>
+            </div>
+
+            <br><br>
+            <!-- Submit Button -->
+            <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="action">Submit</button>
+        </form>
+        
+    </div>
+
+
+    <!-- Materialize JS (needed for some components like select dropdowns) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Initialize Materialize select component
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
+    
+    <script>
+        function search() {
+            const query = document.getElementById('search').value;
+            if (query) {
+                document.getElementById('results').innerHTML = `You searched for: <strong>${query}</strong>`;
+            } else {
+                document.getElementById('results').innerHTML = 'Please enter a search term.';
+            }
+        }
+    </script>
+   
+
+</body>
+</html>
